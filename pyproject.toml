@@ -1,0 +1,24 @@
+[project]
+name = "jibgooham"
+version = "0.1.0"
+description = "자취방 구할 때 쓰는 통합 부동산 검색 도구 (직방·네이버·당근·다방 + V-World 검증)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit>=1.40.0",
+    "streamlit-folium>=0.23.0",
+    "httpx[asyncio]>=0.28.0",
+    "playwright>=1.49.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "folium>=0.19.0",
+    "structlog>=24.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+jibgooham = "jibgooham.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
